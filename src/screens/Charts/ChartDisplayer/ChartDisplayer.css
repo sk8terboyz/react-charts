@@ -1,0 +1,21 @@
+.displayer {
+    border: 2px dashed black;
+    height: 600px;
+}
+
+.hidden {
+    display: none;
+}
+
+#cross {
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    left: 48%;
+    color: #cc2e2e;
+	font-weight: bold;
+}
+
+#header {
+    margin: 15px;
+}
