@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { CartesianGrid, ComposedChart, Legend, ResponsiveContainer, Scatter, Tooltip, XAxis, YAxis, Line } from "recharts";
 
-// This graph has been put on the backburner due to the fact it fails the first 2 times of trying to get the best fit line and the solution is most likely using async/await but I need to learn more about it so I am going to make a new project focusing on that to better understand and if I remember this project after that one then I will come back and fix this.
-
 const LineOfBestFit = () => {
     const data = [
         { index: 10, red: 100, blue: 200 },
@@ -33,8 +31,6 @@ const LineOfBestFit = () => {
     const [avgBlue, setAvgBlue] = useState();
     const [yIntercept, setYIntercept] = useState();
 
-    let avg = 0;
-
     const calcSlope = async () => {
         console.log(data);
         let indexSum = 0; 
@@ -45,28 +41,29 @@ const LineOfBestFit = () => {
             redSum += data[i].red;
             blueSum += data[i].blue;
         }
-        setAvgIndex(indexSum/(data.length-4));
-        setAvgRed(redSum/(data.length-4));
-        setAvgBlue(blueSum/(data.length-4));
+        // await has no effect on these calls
+        setAvgIndex(indexSum / (data.length - 4));
+        setAvgRed(redSum / (data.length - 4));
+        setAvgBlue(blueSum / (data.length - 4));
 
-        setTimeout(() => {
-            let red = 0;
-            let blue = 0; 
-            let bottom = 0;
-            // calc slopes
-            for(let i = 0; i< (data.length-4); i++) {
-                red += ((data[i].index-avgIndex)*(data[i].red));
-                blue += ((data[i].index-avgIndex)*(data[i].blue));
-                bottom += ((data[i].index-avgIndex)*(data[i].index-avgIndex));
-            }
-    
-            setRedSlope(red/bottom);
-            setBlueSlope(blue/bottom);
-            setTimeout(() => {
-                console.log(redSlope);
-                console.log(blueSlope);
-            }, 500);
+        // need to wait for averages to be set before we can continue
+        // maybe timeout for half a second works?
+        await setTimeout(() => {
+            console.log("averages loaded?");
         }, 500);
+
+        let red = 0;
+        let blue = 0; 
+        let bottom = 0;
+        // calc slopes
+        for(let i = 0; i< (data.length-4); i++) {
+            red += ((data[i].index-avgIndex)*(data[i].red));
+            blue += ((data[i].index-avgIndex)*(data[i].blue));
+            bottom += ((data[i].index-avgIndex)*(data[i].index-avgIndex));
+        }
+
+        setRedSlope(red/bottom);
+        setBlueSlope(blue/bottom);
 
         console.log(redSlope);
         console.log(blueSlope);
