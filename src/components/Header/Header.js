@@ -15,8 +15,8 @@ const Header = () => {
                             <span className="visually-hidden">(current)</span>
                         </a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/chartDisplay">Graphs</a>
+                        <li className="nav-item">
+                        <a className="nav-link" href="/chartDisplay">Graphs</a>
                         </li>
                         {/* <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>

@@ -35,14 +35,14 @@ const RadialBarGraph = () => {
         },
         {
           name: '50+',
-          uv: 2.63,
+          uv: 20.63,
           pv: 4800,
           fill: '#d0ed57',
         },
         {
-          name: 'unknow',
-          uv: 6.67,
-          pv: 4800,
+          name: 'unknown',
+          uv: 100,
+          pv: 1000,
           fill: '#ffc658',
         },
       ];

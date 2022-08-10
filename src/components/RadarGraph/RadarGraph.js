@@ -39,12 +39,7 @@ const RadarGraph = () => {
           B: 85,
           fullMark: 150,
         },
-        {
-          subject: 'Biology',
-          A: 75,
-          B: 60,
-          fullMark: 150,
-        },
+        
     ];
 
     return (

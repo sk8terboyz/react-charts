@@ -8,6 +8,7 @@ import $ from 'jquery';
 import ScatterGraph from '../../../components/ScatterGraph/ScatterGraph';
 import RadarGraph from '../../../components/RadarGraph/RadarGraph';
 import RadialBarGraph from '../../../components/RadialBar/RadialBar';
+import LineOfBestFit from '../../../components/LineOfBestFit/LineOfBestFit';
 const ChartDisplayer = () => {
 
     const graphDisplay = (graphNum) => {
@@ -20,6 +21,7 @@ const ChartDisplayer = () => {
                 $(".scatter")[0].classList.add("hidden");
                 $(".radar")[0].classList.add("hidden");
                 $(".radial")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".line")[0].classList.remove("hidden");
                 break;
@@ -31,6 +33,7 @@ const ChartDisplayer = () => {
                 $(".scatter")[0].classList.add("hidden");
                 $(".radar")[0].classList.add("hidden");
                 $(".radial")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".bar")[0].classList.remove("hidden");
                 break;
@@ -42,6 +45,7 @@ const ChartDisplayer = () => {
                 $(".scatter")[0].classList.add("hidden");
                 $(".radar")[0].classList.add("hidden");
                 $(".radial")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".area")[0].classList.remove("hidden");
                 break;
@@ -53,6 +57,7 @@ const ChartDisplayer = () => {
                 $(".scatter")[0].classList.add("hidden");
                 $(".radar")[0].classList.add("hidden");
                 $(".radial")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".pie")[0].classList.remove("hidden");
                 break;
@@ -64,6 +69,7 @@ const ChartDisplayer = () => {
                 $(".pie")[0].classList.add("hidden");
                 $(".radar")[0].classList.add("hidden");
                 $(".radial")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".scatter")[0].classList.remove("hidden");
                 break;
@@ -75,6 +81,7 @@ const ChartDisplayer = () => {
                 $(".pie")[0].classList.add("hidden");
                 $(".scatter")[0].classList.add("hidden");
                 $(".radial")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".radar")[0].classList.remove("hidden");
                 break;
@@ -86,8 +93,21 @@ const ChartDisplayer = () => {
                 $(".pie")[0].classList.add("hidden");
                 $(".scatter")[0].classList.add("hidden");
                 $(".radar")[0].classList.add("hidden");
+                $(".bestFit")[0].classList.add("hidden");
                 // Display chart
                 $(".radial")[0].classList.remove("hidden");
+                break;
+            case 7:
+                // Hide charts
+                $(".line")[0].classList.add("hidden");
+                $(".bar")[0].classList.add("hidden");
+                $(".area")[0].classList.add("hidden");
+                $(".pie")[0].classList.add("hidden");
+                $(".scatter")[0].classList.add("hidden");
+                $(".radar")[0].classList.add("hidden");
+                $(".radial")[0].classList.add("hidden");
+                // Display chart
+                $(".bestFit")[0].classList.remove("hidden");
                 break;
         
             default:
@@ -111,6 +131,7 @@ const ChartDisplayer = () => {
                     <Col><button className="btn btn-info" onClick={e => graphDisplay(4)}>Scatter Graph</button></Col>
                     <Col><button className="btn btn-primary" onClick={e => graphDisplay(5)}>Radar Graph</button></Col>
                     <Col><button className="btn btn-light" onClick={e => graphDisplay(6)}>Radial Bar Graph</button></Col>
+                    <Col><button className="btn btn-outline-success" onClick={e => graphDisplay(7)}>Best Fit Graph</button></Col>
                 </Row>
                 <h3 id="header">Graph Displayer</h3>
                 <Row className="displayer">
@@ -141,6 +162,10 @@ const ChartDisplayer = () => {
                     <Col className="radial graph hidden">
                         <button id="cross" onClick={hideGraph}>❌</button>
                         <RadialBarGraph />
+                    </Col>
+                    <Col className="bestFit graph hidden">
+                        <button id="cross" onClick={hideGraph}>❌</button>
+                        <LineOfBestFit />
                     </Col>
                 </Row>
             </Container>

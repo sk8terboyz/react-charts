@@ -26,9 +26,9 @@ const PieGraph = () => {
 
     return (
         <div className="pieGraphContainer">
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="100%" height={600}>
                 <PieChart width={600} height={600}>
-                    <Pie data={data} cx="50%" cy="50%" labelLine={false} label={renderCustomizedLabel} outerRadius={80} fill="#8884d8" dataKey="value">
+                    <Pie data={data} cx="50%" cy="50%" labelLine={false} label={renderCustomizedLabel} outerRadius={250} fill="#8884d8" dataKey="value">
                         {data.map((entry, index) => {
                             return(<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
                         })}
