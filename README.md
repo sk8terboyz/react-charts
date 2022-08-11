@@ -10,6 +10,7 @@ This web application was created making use of libraries such as: ReactJS, Recha
     - ConnectNulls - any empty space between points will be filled with a line connecting the 2 points
 
 ### Bar Chart
+ - A multi-part bar graph that displays 2 sets of values across any desired range
 
 ### Area Chart
 
