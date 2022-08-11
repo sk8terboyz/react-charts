@@ -6,7 +6,7 @@ This web application was created making use of libraries such as: ReactJS, Recha
 
 ### Line Chart
  - A simple line graph where points are plotted and lines are drawn from each point is created.
- - #### Optional:
+ - Optional:
     - ConnectNulls - any empty space between points will be filled with a line connecting the 2 points
 
 ### Bar Chart
