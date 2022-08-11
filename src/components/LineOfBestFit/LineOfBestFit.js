@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import { CartesianGrid, ComposedChart, Legend, ResponsiveContainer, Scatter, Tooltip, XAxis, YAxis, Line } from "recharts";
 
 const LineOfBestFit = () => {
-    const data = [
+    const MAXWIDTH = 180;
+    const [data, setData] = useState([
         { index: 10, red: 100, blue: 200 },
         { index: 20, red: 120, blue: 100 },
         { index: 30, red: 170, blue: 300 },
@@ -18,75 +20,92 @@ const LineOfBestFit = () => {
         { index: 130, red: 167, blue: 130 },
         { index: 140, red: 150, blue: 150 },
         { index: 150, red: 140, blue: 140 },
-        { index: 20, redLine: 0},
-        { index: 200, redLine: 200},
-        { index: 40, blueLine: 0},
-        { index: 200, blueLine: 400},
-    ];
+        { index: 160, red: 320, blue: 300 },
+    ]);
+    const [bFL, setBFL] = useState(false);
 
-    const [redSlope, setRedSlope] = useState();
-    const [blueSlope, setBlueSlope] = useState();
-    const [avgIndex, setAvgIndex] = useState();
-    const [avgRed, setAvgRed] = useState();
-    const [avgBlue, setAvgBlue] = useState();
-    const [yIntercept, setYIntercept] = useState();
+    const calcAverages = () => {
+        let averages = [];
+        let indexAvg = 0;
+        let redAvg = 0;
+        let blueAvg = 0;
 
-    const calcSlope = async () => {
-        console.log(data);
-        let indexSum = 0; 
-        let redSum = 0;
-        let blueSum = 0;
-        for(let i = 0; i < (data.length-4); i++) {
-            indexSum += data[i].index;
-            redSum += data[i].red;
-            blueSum += data[i].blue;
-        }
-        // await has no effect on these calls
-        setAvgIndex(indexSum / (data.length - 4));
-        setAvgRed(redSum / (data.length - 4));
-        setAvgBlue(blueSum / (data.length - 4));
+        data.forEach(val => {
+            if(typeof(val.index) === "number" && typeof(val.red) === "number" && typeof(val.blue) === "number") {
+                indexAvg += val.index;
+                redAvg += val.red;
+                blueAvg += val.blue;
+            }
+        })
+        indexAvg = (indexAvg/(data.length));
+        redAvg = (redAvg/(data.length));
+        blueAvg = (blueAvg/(data.length));
+        
+        averages.push(Number(indexAvg.toFixed(2)));
+        averages.push(Number(redAvg.toFixed(2)));
+        averages.push(Number(blueAvg.toFixed(2)));
+        
+        return averages;
+    }
 
-        // need to wait for averages to be set before we can continue
-        // maybe timeout for half a second works?
-        await setTimeout(() => {
-            console.log("averages loaded?");
-        }, 500);
-
-        let red = 0;
-        let blue = 0; 
+    const calcSlope = () => {
+        let avgs = calcAverages();
+        let topRed = 0;
+        let topBlue = 0;
         let bottom = 0;
-        // calc slopes
-        for(let i = 0; i< (data.length-4); i++) {
-            red += ((data[i].index-avgIndex)*(data[i].red));
-            blue += ((data[i].index-avgIndex)*(data[i].blue));
-            bottom += ((data[i].index-avgIndex)*(data[i].index-avgIndex));
+        let redSlope = 0;
+        let blueSlope = 0;
+        let slopes = [];
+
+        data.forEach(val => {
+            if(typeof(val.index) === "number" && typeof(val.red) === "number" && typeof(val.blue) === "number") {
+                // calc red
+                topRed += Math.round((val.index - avgs[0]) * (val.red - avgs[1]));
+                // calc blue
+                topBlue += Math.round((val.index - avgs[0]) * (val.blue - avgs[2]));
+                // calc bottom
+                bottom += Math.round((val.index - avgs[0]) * (val.index - avgs[0]));
+            }
+        })
+
+        redSlope = Number((topRed/bottom).toFixed(2));
+        blueSlope = Number((topBlue/bottom).toFixed(2));
+
+        slopes.push(redSlope);
+        slopes.push(blueSlope);
+
+        return slopes;
+    }
+
+    const calcYIntercept = () => {
+        const avgs = calcAverages();
+        const slopes = calcSlope();
+        let yIntercepts = []
+        
+        let redYI = avgs[1]-(avgs[0] * slopes[0]);
+        let blueYI = avgs[2]-(avgs[0] * slopes[1]);
+
+        yIntercepts.push(redYI);
+        yIntercepts.push(blueYI);
+        return yIntercepts;
+    }
+
+    const calcLOBF = () => {
+        if(!bFL) {
+            const yIntercepts = calcYIntercept();
+            const slopes = calcSlope();
+    
+            // set best fit line data points
+            setData((old) => [...old, {index: 0, redLine: ((slopes[0]*0)+yIntercepts[0])}, {index: MAXWIDTH, redLine: ((slopes[0]*MAXWIDTH)+yIntercepts[0])}, {index: 0, blueLine: ((slopes[1]*0)+yIntercepts[1])}, {index: MAXWIDTH, blueLine: ((slopes[1]*MAXWIDTH)+yIntercepts[1])}]);
+            // stop multiple best fit lines from appearing
+            setBFL(true);
+            // remove button
+            document.getElementsByClassName("calcLOBF")[0].classList.add("disabled");
+            document.getElementsByClassName("calcLOBF")[0].textContent = "Already Calculated";
+
+            document.getElementsByClassName("redSlope")[0].innerHTML = `Red Slope: y = (${slopes[0]})x + ${yIntercepts[0].toFixed(2)}`
+            document.getElementsByClassName("blueSlope")[0].textContent += `Blue Slope: y = (${slopes[1]})x + ${yIntercepts[1].toFixed(2)}`
         }
-
-        setRedSlope(red/bottom);
-        setBlueSlope(blue/bottom);
-
-        console.log(redSlope);
-        console.log(blueSlope);
-        // avgIndex = all index values added / 15
-        // avgRed = all reds added / 15
-        // avgBlue = all blues added / 15
-        // slope calculation #1: (sum((index - avgIndex)(red-avgRed)))/(sum(avgIndex*avgIndex)))
-        // slope calculation #2: (sum((index - avgIndex)(blue-avgBlue)))/(sum(avgIndex*avgIndex)))
-    }
-
-    const calcYIntercept = async () => {
-        console.log("Y Intercept");
-        await calcSlope();
-        // y-intercept calculation: (y-[sum of all y's / amount of y's]) = a(x-[sum of all x's / amount of x's]) + b
-        // a = slope
-        // return b
-    }
-
-    const getLOBF = async () => {
-        await calcYIntercept();
-        console.log("Line Of Best Fit");
-        // call calcYIntercept which calls calcSlope
-        // add index and line values to data
     }
 
     return (
@@ -104,7 +123,17 @@ const LineOfBestFit = () => {
                     <Line dataKey="redLine" stroke="red" dot={false} activeDot={false} legendType="none" />
                 </ComposedChart>
             </ResponsiveContainer>
-            <button className="btn btn-outline-info" onClick={getLOBF}>Calc Best-Fit</button>
+            <Row>
+                <Col>
+                    <p className="redSlope"></p>
+                </Col>
+                <Col>
+                    <button className="btn btn-outline-info calcLOBF" onClick={calcLOBF}>Calc Best-Fit Line</button>
+                </Col>
+                <Col>
+                    <p className="blueSlope"></p>
+                </Col>
+            </Row>
         </div>
     )
 }
