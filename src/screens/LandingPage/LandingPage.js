@@ -8,6 +8,7 @@ const LandingPage = () => {
                 <Row>
                     <h4>Welcome to the Graph Displayer</h4>
                     <Col><button type="button" className="btn btn-outline-info"><Link to="/chartDisplay">Go To Graphs</Link></button></Col>
+                    <Col><button type="button" className="btn btn-outline-info"><Link to="/buttonWorkshop">Go To Buttons</Link></button></Col>
                 </Row>
                 <Row>
                     <p>Graphs are a necessary visual respresentation for any professional level presentation, so why not upgrade to making them yourself digitally.</p>

@@ -22,6 +22,7 @@ const LineOfBestFit = () => {
         { index: 150, red: 140, blue: 140 },
         { index: 160, red: 320, blue: 300 },
     ]);
+
     const [bFL, setBFL] = useState(false);
 
     const calcAverages = () => {

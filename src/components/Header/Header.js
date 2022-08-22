@@ -18,10 +18,10 @@ const Header = () => {
                         <li className="nav-item">
                         <a className="nav-link" href="/chartDisplay">Graphs</a>
                         </li>
-                        {/* <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                        </li>
                         <li class="nav-item">
+                        <a class="nav-link" href="/buttonWorkshop">Buttons</a>
+                        </li>
+                        {/* <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                         </li> */}
                         {/* <li className="nav-item dropdown">

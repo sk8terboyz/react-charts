@@ -1,14 +1,15 @@
 import './ChartDisplayer.css'
+import { Container, Row, Col } from "react-bootstrap";
+import $ from 'jquery';
 import LineGraph from "../../../components/LineGraph/LineGraph";
 import BarGraph from '../../../components/BarGraph/BarGraph';
 import AreaGraph from '../../../components/AreaGraph/AreaGraph';
 import PieGraph from '../../../components/PieGraph/PieGraph'; 
-import { Container, Row, Col } from "react-bootstrap";
-import $ from 'jquery';
 import ScatterGraph from '../../../components/ScatterGraph/ScatterGraph';
 import RadarGraph from '../../../components/RadarGraph/RadarGraph';
 import RadialBarGraph from '../../../components/RadialBar/RadialBar';
 import LineOfBestFit from '../../../components/LineOfBestFit/LineOfBestFit';
+import { useState } from 'react';
 const ChartDisplayer = () => {
 
     const graphDisplay = (graphNum) => {
