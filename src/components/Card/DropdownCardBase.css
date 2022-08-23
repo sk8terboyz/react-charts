@@ -1,7 +1,10 @@
 
-.card {
+.cardContainer {
     border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
     width: 300px;
+    box-shadow: 2px 2px 5px black;
+    position: relative;
 }
 
 hr {
@@ -26,13 +29,31 @@ hr {
     position: absolute;
     right: 1%;
     top: 3%;
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+}
+
+.extender:hover {
+    font-size: large;
+    color: grey
+}
+
+.extender:active { 
+    font-size: medium;
 }
 
 #expand-contract {
-    margin-top: -100%;
+    margin-top: -25%;
     transition: all 1s;
 }
 
 #expand-contract.expanded {
     margin-top: 0;
+}
+
+#list {
+    list-style-type: none;
+    text-align: start;
+    word-spacing: 1rem;
 }

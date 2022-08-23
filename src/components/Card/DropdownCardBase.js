@@ -1,8 +1,7 @@
 import { useState } from "react";
 import './DropdownCardBase.css';
-import $ from 'jquery';
 
-const DropdownCardBase = (cardBody) => {
+const DropdownCardBase = () => {
 
     const [open, setOpen] = useState(false);
     
@@ -14,14 +13,21 @@ const DropdownCardBase = (cardBody) => {
     }
 
     return (
-        <div className="card">
+        <div className="cardContainer">
             <div className="cardHeader">
                 <h5 className="cardTitle">Website Name</h5>
-                <button className="btn btn-outline-info btn-sm extender" onClick={(e) => {toggle(e)}}>{open ? "-" : "+"}</button>
+                <button className="extender" onClick={(e) => {toggle(e)}}>({open ? "+" : "-"})</button>
             </div>
             <hr />
             <div className="cardBody">
-                <p id="expand-contract" className="expanded">This is placeholder text to test the different things that I want to test and will leave this as an ambigous statement.</p>
+                <div id="expand-contract" className="expanded">
+                    <ul id="list">
+                        <li>State: Test</li>
+                        <li>Capital: Test</li>
+                        <li>Area: Test</li>
+                        <li>Status: Test</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
