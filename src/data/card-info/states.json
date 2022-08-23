@@ -1,0 +1,304 @@
+{
+    "states": [
+        {
+            "name": "Alabama",
+            "capital": "Montgomery",
+            "area": 52419,
+            "units": "sq miles"
+        },
+        {
+            "name": "Alaska",
+            "capital": "Juneau",
+            "area": 663267,
+            "units": "sq miles"
+        },
+        {
+            "name": "Arizona",
+            "capital": "Phoenix",
+            "area": 113998,
+            "units": "sq miles"
+        },
+        {
+            "name": "Arkansas",
+            "capital": "Little Rock",
+            "area": 53179,
+            "units": "sq miles"
+        },
+        {
+            "name": "California",
+            "capital": "Sacramento",
+            "area": 163696,
+            "units": "sq miles"
+        },
+        {
+            "name": "Colorado",
+            "capital": "Denver",
+            "area": 104094,
+            "units": "sq miles"
+        },
+        {
+            "name": "Connecticut",
+            "capital": "Hartford",
+            "area": 5543,
+            "units": "sq miles"
+        },
+        {
+            "name": "Delaware",
+            "capital": "Dover",
+            "area": 2489,
+            "units": "sq miles"
+        },
+        {
+            "name": "Florida",
+            "capital": "Tallahassee",
+            "area": 65755,
+            "units": "sq miles"
+        },
+        {
+            "name": "Georgia",
+            "capital": "Atlanta",
+            "area": 59425,
+            "units": "sq miles"
+        },
+        {
+            "name": "Hawaii",
+            "capital": "Honolulu",
+            "area": 10931,
+            "units": "sq miles"
+        },
+        {
+            "name": "Idaho",
+            "capital": "Boise",
+            "area": 83570,
+            "units": "sq miles"
+        },
+        {
+            "name": "Illinois",
+            "capital": "Springfield",
+            "area": 57914,
+            "units": "sq miles"
+        },
+        {
+            "name": "Indiana",
+            "capital": "Indianapolis",
+            "area": 36418,
+            "units": "sq miles"
+        },
+        {
+            "name": "Iowa",
+            "capital": "Des Moines",
+            "area": 56272,
+            "units": "sq miles"
+        },
+        {
+            "name": "Kansas",
+            "capital": "Topeka",
+            "area": 82277,
+            "units": "sq miles"
+        },
+        {
+            "name": "Kentucky",
+            "capital": "Frankfort",
+            "area": 40409,
+            "units": "sq miles"
+        },
+        {
+            "name": "Louisiana",
+            "capital": "Baton Rouge",
+            "area": 51840,
+            "units": "sq miles"
+        },
+        {
+            "name": "Maine",
+            "capital": "Augusta",
+            "area": 35385,
+            "units": "sq miles"
+        },
+        {
+            "name": "Maryland",
+            "capital": "Annapolis",
+            "area": 12407,
+            "units": "sq miles"
+        },
+        {
+            "name": "Massachusetts",
+            "capital": "Boston",
+            "area": 10555,
+            "units": "sq miles"
+        },
+        {
+            "name": "Michigan",
+            "capital": "Lansing",
+            "area": 96716,
+            "units": "sq miles"
+        },
+        {
+            "name": "Minnesota",
+            "capital": "St Paul",
+            "area": 86939,
+            "units": "sq miles"
+        },
+        {
+            "name": "Mississippi",
+            "capital": "Jackson",
+            "area": 48430,
+            "units": "sq miles"
+        },
+        {
+            "name": "Missouri",
+            "capital": "Jefferson City",
+            "area": 69704,
+            "units": "sq miles"
+        },
+        {
+            "name": "Montana",
+            "capital": "Helena",
+            "area": 147042,
+            "units": "sq miles"
+        },
+        {
+            "name": "Nebraska",
+            "capital": "Lincoln",
+            "area": 77354,
+            "units": "sq miles"
+        },
+        {
+            "name": "Nevada",
+            "capital": "Carson City",
+            "area": 110561,
+            "units": "sq miles"
+        },
+        {
+            "name": "New Hampshire",
+            "capital": "Concord",
+            "area": 9350,
+            "units": "sq miles"
+        },
+        {
+            "name": "New Jersey",
+            "capital": "Trenton",
+            "area": 8721,
+            "units": "sq miles"
+        },
+        {
+            "name": "New Mexico",
+            "capital": "Santa Fe",
+            "area": 121589,
+            "units": "sq miles"
+        },
+        {
+            "name": "New York",
+            "capital": "Albany",
+            "area": 54556,
+            "units": "sq miles"
+        },
+        {
+            "name": "North Carolina",
+            "capital": "Raleigh",
+            "area": 53819,
+            "units": "sq miles"
+        },
+        {
+            "name": "North Dakota",
+            "capital": "Bismarck",
+            "area": 70700,
+            "units": "sq miles"
+        },
+        {
+            "name": "Ohio",
+            "capital": "Columbus",
+            "area": 44825,
+            "units": "sq miles"
+        },
+        {
+            "name": "Oklahoma",
+            "capital": "Oklahoma City",
+            "area": 69898,
+            "units": "sq miles"
+        },
+        {
+            "name": "Oregon",
+            "capital": "Salem",
+            "area": 98381,
+            "units": "sq miles"
+        },
+        {
+            "name": "Pennsylvania",
+            "capital": "Harrisburg",
+            "area": 46055,
+            "units": "sq miles"
+        },
+        {
+            "name": "Rhode Island",
+            "capital": "Providence",
+            "area": 1545,
+            "units": "sq miles"
+        },
+        {
+            "name": "South Carolina",
+            "capital": "Columbia",
+            "area": 32020,
+            "units": "sq miles"
+        },
+        {
+            "name": "South Dakota",
+            "capital": "Pierre",
+            "area": 77117,
+            "units": "sq miles"
+        },
+        {
+            "name": "Tennessee",
+            "capital": "Nashville",
+            "area": 42143,
+            "units": "sq miles"
+        },
+        {
+            "name": "Texas",
+            "capital": "Austin",
+            "area": 268581,
+            "units": "sq miles"
+        },
+        {
+            "name": "Utah",
+            "capital": "Salt Lake City",
+            "area": 84899,
+            "units": "sq miles"
+        },
+        {
+            "name": "Vermont",
+            "capital": "Montpelier",
+            "area": 9614,
+            "units": "sq miles"
+        },
+        {
+            "name": "Virginia",
+            "capital": "Richmond",
+            "area": 42774,
+            "units": "sq miles"
+        },
+        {
+            "name": "Washington",
+            "capital": "Olympia",
+            "area": 71300,
+            "units": "sq miles"
+        },
+        {
+            "name": "West Virginia",
+            "capital": "Charleston",
+            "area": 24230,
+            "units": "sq miles"
+        },
+        {
+            "name": "Wisconsin",
+            "capital": "Madison",
+            "area": 65498,
+            "units": "sq miles"
+        },
+        {
+            "name": "Wyoming",
+            "capital": "Cheyenne",
+            "area": 97814,
+            "units": "sq miles"
+        }
+    ]
+}

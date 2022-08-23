@@ -1,0 +1,38 @@
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+hr {
+    margin: 0;
+}
+
+.cardHeader {
+    display: flex;
+}
+
+.cardTitle {
+    max-width: 50%;
+    width: fit-content;
+    margin: 2%;
+}
+
+.cardBody {
+    overflow: hidden;
+}
+
+.extender {
+    position: absolute;
+    right: 1%;
+    top: 3%;
+}
+
+#expand-contract {
+    margin-top: -100%;
+    transition: all 1s;
+}
+
+#expand-contract.expanded {
+    margin-top: 0;
+}

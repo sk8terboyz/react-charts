@@ -18,11 +18,11 @@ const Header = () => {
                         <li className="nav-item">
                         <a className="nav-link" href="/chartDisplay">Graphs</a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/buttonWorkshop">Buttons</a>
+                        <li className="nav-item">
+                        <a className="nav-link" href="/buttonWorkshop">Buttons</a>
                         </li>
-                        {/* <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        {/* <li className="nav-item">
+                        <a className="nav-link" href="#">About</a>
                         </li> */}
                         {/* <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>

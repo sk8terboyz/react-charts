@@ -9,14 +9,14 @@ const DropdownCard = () => {
     return (
         <div>
             <Container>
-                <Row>
+                <Row className="border">
                     <Row className='justify-content-md-center'>
                         <Col md={3}>
                             <h5>Website Name & Link</h5>
                         </Col>
                         <Col md={1}>
                             <Button onClick={() => setOpen(!open)} aria-controls="cardData" aria-expanded={open} variant="info">
-                                {open ? "+" : "-"}
+                                {open ? "-" : "+"}
                             </Button>
                         </Col>
                     </Row>
