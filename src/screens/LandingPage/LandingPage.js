@@ -15,8 +15,12 @@ const LandingPage = () => {
                     <p>This is not affiliated with reacharts or react in any way. I am just a guy enjoying learning how to create them too.</p>
                 </Row>
                 <Row>
-                    <h5>Work In Progress Buttons</h5>
+                    <h5>Dropdowns:</h5>
                     <Col><button type="button" className="btn btn-outline-info"><Link to="/buttonWorkshop">Go To Buttons</Link></button></Col>
+                </Row>
+                <Row>
+                    <p>Creating dropdown/accordions that are triggered by a button click are very useful for creating good looking & efficient webpages.</p>
+                    <p>I use multiple different styles to accomplish the creation of the accordion and the buttons that trigger them.</p>
                 </Row>
             </Container>
         </div>

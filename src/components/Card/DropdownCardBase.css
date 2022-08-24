@@ -3,7 +3,7 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10%;
     width: 300px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: inset 2px 2px 5px black;
     position: relative;
 }
 
@@ -45,7 +45,7 @@ hr {
 
 #expand-contract {
     margin-top: -25%;
-    transition: all 1s;
+    transition: all 1s ease;
 }
 
 #expand-contract.expanded {

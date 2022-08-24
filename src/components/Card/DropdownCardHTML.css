@@ -1,0 +1,25 @@
+
+.cardHolder {
+    /* border: 2px solid black; */
+    width: clamp(200px, 250px, 400px);
+}
+
+details[open] {
+    font-size: large;
+}
+
+details > summary {
+    background-color: #ddd;
+}
+
+details > ul {
+    background-color: rgb(175, 175, 175);
+    border: 2px solid black;
+    width: inherit;
+    list-style-type: none;
+    text-align: start;
+}
+
+summary {
+    border: 1px solid rgb(66, 66, 66);
+}
