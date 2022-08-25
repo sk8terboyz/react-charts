@@ -1,23 +1,33 @@
 
 .cardHolder {
-    /* border: 2px solid black; */
-    width: clamp(200px, 250px, 400px);
-}
-
-details[open] {
-    font-size: large;
+    width: clamp(100px, 250px, 400px);
 }
 
 details > summary {
     background-color: #ddd;
+    border-radius: 10px 10px 0 0;
 }
 
 details > ul {
     background-color: rgb(175, 175, 175);
+    border-radius: 0 0 10px 10px;
     border: 2px solid black;
     width: inherit;
     list-style-type: none;
     text-align: start;
+}
+details {
+    transition: 1s ease;
+    overflow: hidden;
+}
+
+details[open] {
+    font-size: large;
+    height: 10em;
+}
+
+details:not([open]) {
+    height: 2em;
 }
 
 summary {

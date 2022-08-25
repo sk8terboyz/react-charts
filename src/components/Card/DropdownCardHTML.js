@@ -5,7 +5,7 @@ const DropdownCardHTML = () => {
     return (
         <div className="cardHolder">
             <details>
-                <summary>Title</summary>
+                <summary><a target="_blank" href="https://www.youtube.com/">www.youtube.com</a></summary>
                 <ul>
                     <li>Test: Test</li>
                     <li>Test: Test</li>
