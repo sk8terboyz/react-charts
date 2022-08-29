@@ -23,3 +23,15 @@ This web application was created making use of libraries such as: ReactJS, Recha
 ### Radial Bar Chart
 
 ### Line Of Best Fit Chart
+
+## Buttons/Dropdowns
+
+### React Dropdown Animated
+ - This dropdown card was created with React and React-Bootstrap.
+ 
+### Dropdown Animated JS/CSS
+ - This dropdown card was created with pure JavaScript and CSS
+
+### Dropdown Animated HTML
+ - This dropdown card was created with just HTML
+   - Yes I learned the details tag was a thing after creating the other 2
