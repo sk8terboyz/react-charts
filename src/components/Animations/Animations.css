@@ -1,20 +1,20 @@
-.container {
-    display: flex;
-}
+/* PickAxe */
 .animationContainer {
     flex: 1;
     border: 2px solid black;
-    min-height: 200px;
+    min-height: 100px;
     margin: 12px;
     cursor: crosshair;
 }
 
 .pickAxe {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     animation-name: pickAxeAnimation;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes pickAxeAnimation {
@@ -22,3 +22,5 @@
     50%  { transform: rotate(-70deg) }
     100%  { transform: rotate(0deg) }
 }
+
+/* BarSlide */

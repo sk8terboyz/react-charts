@@ -356,9 +356,9 @@ const WorldWeatherMap = () => {
         return [{ points: points }]; 
       } 
         
-      function getRandomInt(max) { 
-        return Math.floor(Math.random() * max); 
-      } 
+    //   function getRandomInt(max) { 
+    //     return Math.floor(Math.random() * max); 
+    //   } 
 
     return (
         <div>
