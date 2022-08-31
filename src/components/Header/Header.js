@@ -19,11 +19,14 @@ const Header = () => {
                         <a className="nav-link" href="/chartDisplay">Graphs</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="/buttonWorkshop">Buttons</a>
+                        <a className="nav-link" href="/buttonWorkshop">Dropdowns</a>
                         </li>
-                        {/* <li className="nav-item">
-                        <a className="nav-link" href="#">About</a>
-                        </li> */}
+                        <li className="nav-item">
+                        <a className="nav-link" href="/worldWeather">World Weather</a>
+                        </li>
+                        <li className="nav-item">
+                        <a className="nav-link" href="/animations">Animations</a>
+                        </li>
                         {/* <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                         <div className="dropdown-menu">

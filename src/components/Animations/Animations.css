@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+}
+.animationContainer {
+    flex: 1;
+    border: 2px solid black;
+    min-height: 200px;
+    margin: 12px;
+    cursor: crosshair;
+}
+
+.pickAxe {
+    width: 30px;
+    height: 30px;
+    animation-name: pickAxeAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pickAxeAnimation {
+    0%  { transform: rotate(0deg) }
+    50%  { transform: rotate(-70deg) }
+    100%  { transform: rotate(0deg) }
+}

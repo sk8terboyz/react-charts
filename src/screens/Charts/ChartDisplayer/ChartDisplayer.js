@@ -1,5 +1,5 @@
 import './ChartDisplayer.css'
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import $ from 'jquery';
 import LineGraph from "../../../components/LineGraph/LineGraph";
 import BarGraph from '../../../components/BarGraph/BarGraph';
@@ -9,7 +9,6 @@ import ScatterGraph from '../../../components/ScatterGraph/ScatterGraph';
 import RadarGraph from '../../../components/RadarGraph/RadarGraph';
 import RadialBarGraph from '../../../components/RadialBar/RadialBar';
 import LineOfBestFit from '../../../components/LineOfBestFit/LineOfBestFit';
-import { useState } from 'react';
 const ChartDisplayer = () => {
 
     const graphDisplay = (graphNum) => {
@@ -167,6 +166,11 @@ const ChartDisplayer = () => {
                     <Col className="bestFit graph hidden">
                         <button id="cross" onClick={hideGraph}>❌</button>
                         <LineOfBestFit />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Button variant='outline-info'>Add Data</Button>
                     </Col>
                 </Row>
             </Container>

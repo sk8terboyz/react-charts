@@ -9,11 +9,6 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-    "data data data"
-    "data data data"
-    "data data data"
-    "data data data";
+    "data data data data";
     row-gap: 10px;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
 }

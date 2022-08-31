@@ -24,12 +24,6 @@ const ButtonWorkshop = () => {
                 <DropdownCardHTML />
                 <DropdownCardHTML />
                 <DropdownCardHTML />
-                <DropdownCardHTML />
-                <DropdownCardHTML />
-                <DropdownCardHTML />
-                <DropdownCardHTML />
-                <DropdownCardHTML />
-                <DropdownCardHTML />
             </div>
         </div>
     )

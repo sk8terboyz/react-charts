@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button, Card, Col, Collapse, Container, Row } from 'react-bootstrap';
-import { Link } from "react-router-dom";
 
 const DropdownCard = () => {
 
