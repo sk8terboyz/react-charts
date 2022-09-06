@@ -4,7 +4,7 @@
  
 This web application was created making use of libraries such as: ReactJS, Recharts, & Jquery.
 
-## Charts Displayed
+## Charts Displayed W/ Recharts
 
 ### Line Chart
  - A simple line graph where points are plotted and lines are drawn from each point is created.
