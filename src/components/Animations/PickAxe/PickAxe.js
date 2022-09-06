@@ -15,14 +15,19 @@ const PickAxe = () => {
         setIsActive(false);
     }
 
+    const toggleAnim = () => {
+        $("#pickaxe")[0].classList.toggle("pickAxe");
+    }
+
     $(".animationContainer").on("mousedown", () => { setIsActive(true); startAnim() })
     $(".animationContainer").on("mouseup", () => { stopAnim() })
 
     return (
         <div className='container'>
             <div className='animationContainer'>
-                <img src="./images/pickaxe.png" alt="pickaxe" className="pickAxe"/>
+                <img src="./images/pickaxe.png" alt="pickaxe" className="pickAxe" id="pickaxe"/>
             </div>
+            <button onClick={toggleAnim} id="pickToggle">Toggle Pickaxe</button>
         </div>
     );
 };

@@ -1,11 +1,11 @@
-import BarSlide from "../../components/Animations/BarSlide/BarSlide";
 import PickAxe from "../../components/Animations/PickAxe/PickAxe";
+import SlideShow from "../../components/Animations/SlideShow/SlideShow";
 
 const Animations = () => {
     return (
         <div>
             <PickAxe />
-            <BarSlide />
+            <SlideShow />
         </div>
     )
 }

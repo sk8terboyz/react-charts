@@ -19,6 +19,7 @@ const ButtonWorkshop = () => {
             </div>
             <h4>HTML Details</h4>
             <p>This is made with the &lt;details&gt; tag to create a dropdown card</p>
+            <p>Currently a flicker when closing (attempting to fix)</p>
             <div className="testContainer">
                 <DropdownCardHTML />
                 <DropdownCardHTML />

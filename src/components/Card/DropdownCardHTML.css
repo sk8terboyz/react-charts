@@ -8,7 +8,7 @@ details > summary {
     border-radius: 10px 10px 0 0;
 }
 
-details > ul {
+details > div > ul {
     background-color: rgb(175, 175, 175);
     border-radius: 0 0 10px 10px;
     border: 2px solid black;
@@ -16,17 +16,20 @@ details > ul {
     list-style-type: none;
     text-align: start;
 }
+
 details {
-    transition: 1s ease;
+    transition: 0.5s ease;
     overflow: hidden;
 }
 
 details[open] {
-    font-size: large;
+    /* font-size: large; */
     height: 10em;
 }
 
+
 details:not([open]) {
+    /* font-size: medium; */
     height: 2em;
 }
 
