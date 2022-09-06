@@ -1,5 +1,7 @@
 # Charts/Graphs made in React
  
+ This was initially intended for just charts/graphs, but has expanded since and has become a place where I have tested various features/components that I used for other sites.
+ 
 This web application was created making use of libraries such as: ReactJS, Recharts, & Jquery.
 
 ## Charts Displayed
