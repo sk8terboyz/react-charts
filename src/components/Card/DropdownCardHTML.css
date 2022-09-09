@@ -23,13 +23,11 @@ details {
 }
 
 details[open] {
-    /* font-size: large; */
     height: 10em;
 }
 
 
 details:not([open]) {
-    /* font-size: medium; */
     height: 2em;
 }
 

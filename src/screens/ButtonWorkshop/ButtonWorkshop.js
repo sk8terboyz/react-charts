@@ -12,7 +12,18 @@ const ButtonWorkshop = () => {
             <DropdownCardReact />
             <h4>Dropdown Button</h4>
             <p>This is my recreation of the above without the use of bootstrap to allow for more customizability</p>
+            {/* <p>This has 2 forms: 1 that uses ReactJS & 1 that uses raw JS</p> */}
             <div className="center">
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
+                <DropdownCardBase />
                 <DropdownCardBase />
                 <DropdownCardBase />
                 <DropdownCardBase />

@@ -5,6 +5,13 @@
     width: 300px;
     box-shadow: inset 2px 2px 5px black;
     position: relative;
+    height: fit-content;
+    background-color: rgb(214, 214, 214);
+    margin: 0 6px 0 6px;
+}
+
+.inactive {
+    background-color: rgb(135, 135, 135);
 }
 
 hr {
@@ -16,13 +23,14 @@ hr {
 }
 
 .cardTitle {
-    max-width: 50%;
+    font-size: clamp(0.8em, 1em, 1.2em);
     width: fit-content;
-    margin: 2%;
+    margin: 2% 0 0 5%;
 }
 
 .cardBody {
     overflow: hidden;
+    color: black;
 }
 
 .extender {
@@ -35,16 +43,15 @@ hr {
 }
 
 .extender:hover {
-    font-size: large;
-    color: grey
+    color: grey;
 }
 
-.extender:active { 
-    font-size: medium;
+.extender:active {
+    font-size: clamp(0.8em, 0.9em, 1em);
 }
 
 #expand-contract {
-    margin-top: -25%;
+    margin-top: -35%;
     transition: all 1s ease;
 }
 
