@@ -22,7 +22,7 @@ const Header = () => {
                         <a className="nav-link" href="/buttonWorkshop">Dropdowns</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="/worldWeather">World Weather</a>
+                        <a className="nav-link" href="/modalDisplay">Modal</a>
                         </li>
                         <li className="nav-item">
                         <a className="nav-link" href="/animations">Animations</a>

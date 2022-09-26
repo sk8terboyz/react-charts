@@ -5,6 +5,7 @@ import Animations from './screens/Animations/Animations';
 import ButtonWorkshop from './screens/ButtonWorkshop/ButtonWorkshop';
 import ChartDisplayer from './screens/Charts/ChartDisplayer/ChartDisplayer';
 import LandingPage from './screens/LandingPage/LandingPage';
+import Modal from './screens/Modal/Modal';
 import WorldMap from './screens/WorldMap/WorldMap';
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
           <Route exact path="/" element={<LandingPage />}/>
           <Route exact path="/chartDisplay" element={<ChartDisplayer />}/>
           <Route exact path="/buttonWorkshop" element={<ButtonWorkshop />}/>
-          <Route exact path="/worldWeather" element={<WorldMap />}/>
+          {/* <Route exact path="/worldWeather" element={<WorldMap />}/> */}
           <Route exact path="/animations" element={<Animations />}/>
+          <Route exact path="/modalDisplay" element={<Modal />}/>
         </Routes>
       </BrowserRouter>
     </div>
