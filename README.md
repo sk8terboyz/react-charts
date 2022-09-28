@@ -4,6 +4,10 @@
  
 This web application was created making use of libraries such as: ReactJS, Recharts, & Jquery.
 
+## Current Status
+
+Currently this site is non-functional because I didn't fully realize how to implement Puppeteer into this. I made the mistake of not creating a backend for this site, so all of the work is primarily in the front-end portion. Due to this, trying to implement Puppeteer broke the webpage because it is meant for the backend portion. I am rectifying this issue by removing the Puppeteer portion and moving onto a new webpage that is created with a front-end and back-end setup properly.
+
 ## Charts Displayed W/ Recharts
 
 ### Line Chart
